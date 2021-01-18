@@ -50,7 +50,7 @@ COPY --from=cleaner --chown=piaf:piaf /piaf /piaf
 
 ENV DEBUG="True"
 ENV SECRET_KEY="change-me-in-production"
-ENV PORT="8000"
+ENV PORT="8040"
 ENV WORKERS="2"
 ENV MATOMO_SITE_ID=""
 
