@@ -6,7 +6,7 @@ services:
     volumes:
       - .:/src
       - venv:/src/venv
-    command: ["/src/tools/dev-django.sh", "0.0.0.0:8000"]
+    command: ["/src/tools/dev-django.sh", "0.0.0.0:8040"]
     environment:
       ADMIN_USERNAME: "${DJANGO_ADMIN_USERNAME}"
       ADMIN_PASSWORD: "${DJANGO_ADMIN_PASSWORD}"
@@ -19,7 +19,7 @@ services:
       WEBPACK_ENVIRONMENT_PRODUCTION: "${WEBPACK_ENVIRONMENT_PRODUCTION}"
       DJANGO_ENVIRONMENT_PRODUCTION: "${DJANGO_ENVIRONMENT_PRODUCTION}"
     ports:
-      - 8000:8000
+      - 8040:8040
 
   webpack:
     image: node:8
