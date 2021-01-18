@@ -39,7 +39,7 @@ WORKERS="2"
 
 if [[ ${DJANGO_ENVIRONMENT_PRODUCTION} = "True" ]]; then
   echo "Starting django in Production mode"
-  "${venv}/bin/gunicorn" --bind="0.0.0.0:${PORT:-8040}" --workers="${WORKERS:-1}" --pythonpath='/src,/src/src' app.wsgi --timeout 300
+  "${venv}/bin/gunicorn" --bind="0.0.0.0:${PORT:-8000}" --workers="${WORKERS:-1}" --pythonpath='/src,/src/src' app.wsgi --timeout 300
 else
   echo "Starting django in Development mode"
   "${venv}/bin/python" -u "${app}/manage.py" runserver "$@"
