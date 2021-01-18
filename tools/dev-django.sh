@@ -34,7 +34,7 @@ if [[ -n "${ADMIN_USERNAME}" ]] && [[ -n "${ADMIN_PASSWORD}" ]] && [[ -n "${ADMI
   || echo "user admin already exist"
 fi
 
-PORT="8000"
+PORT="8040"
 WORKERS="2"
 
 if [[ ${DJANGO_ENVIRONMENT_PRODUCTION} = "True" ]]; then
